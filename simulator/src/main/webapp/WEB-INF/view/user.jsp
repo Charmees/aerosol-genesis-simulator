@@ -9,7 +9,7 @@
  
 <h2>User Manager</h2>
  
-<form:form method="post" action="add.html" commandName="user">
+<form:form method="post" action="add" commandName="user">
  
     <table>
     <tr>
@@ -40,5 +40,7 @@
 </table>
 </c:if>
  
+ 
+ <a href="vision">Go to Jquery UI</a>
 </body>
 </html>

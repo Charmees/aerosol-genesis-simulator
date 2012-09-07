@@ -21,7 +21,6 @@ public class UserController {
  
     @RequestMapping("/index")
     public String listUser(Map<String, Object> map) {
- 
         map.put("user", new User());
         map.put("userList", userService.listUsers());
  
@@ -29,17 +28,14 @@ public class UserController {
     }
  
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String addUser(@ModelAttribute("user")
-    User user, BindingResult result) {
- 
+    public String addUser(@ModelAttribute("user") User user, BindingResult result) { 
         userService.addUser(user);
  
         return "redirect:/index";
     }
  
     @RequestMapping("/delete/{userId}")
-    public String deleteUser(@PathVariable("userId")
-    long userId) {
+    public String deleteUser(@PathVariable("userId") long userId) {
  
         userService.removeUser(userId);
  
